@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,800,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: wheat;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  width: 170vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.container .card {
+  position: relative;
+  height: 65vh;
+  width: 43vh;
+  border-radius: 10px;
+  box-shadow: rgba(14, 13, 13, 0.596) 2px 2px;
+  padding: 0;
+  background: #97c3c1;
+  opacity: 100%;
+  display: flex;
+  /* width: 43vh;
+  height: 65vh; */
+  margin: 30px 0;
+}
+.container .card .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(120, 66, 207), rgb(114, 185, 197));
+  border-radius: 9px;
+  /* align-items: center; */
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.container .card:hover .imgBx {
+  content: attr(data-text);
+  /* content: attr(data-text); */
+  width: 130px;
+  font-size: 0em;
+  height: 100px;
+  left: -85px;
+  top: calc(45% - 200px);
+  transition: 0.8s ease-in-out;
+  background: linear-gradient(rgb(255, 255, 255), rgba(233, 180, 217, 0.911));
+  border-radius: 20px;
+}
+.container .card .imgBx:before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-family: "PT Serif", serif;
+  color: rgba(228, 228, 228, 0.87);
+  font-weight: 700;
+}
+.container .card .imgBx img {
+  max-width: 290px;
+  max-height: 290px;
+  margin-bottom: 120px;
+  transition: 0.5s ease-in-out;
+}
+.container .card:hover .imgBx img {
+  max-width: 75px;
+  margin-bottom: 0
+}
+.container .card .content {
+  position: absolute;
+  right: 0;
+  width: calc(100% -75px);
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card .content h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.container .card .content a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  padding: 5px 10px;
+  background: #333;
+  text-decoration: none;
+}
+.container .card .content p {
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+}
+@media(max-width:992px)
+{
+  .container{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
